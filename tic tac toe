@@ -480,11 +480,14 @@ def initialize_new_game(player1,player2):
     X's and O's.
 '''      
 #-------------------------------------------MAIN BODY OF THE CODE---------------------------------------------------#
-#------------------------------------------------player name assignment---------------------------------------------#
 
+#player name assignment#
 player1['name'] = player_naming('A',player2['name'],1)
 player2['name'] = player_naming('B',player1['name'],2)
+
+# Is set to "True" to start the game and it is also used to stop the game#
 continue_playing = True
+#Now the game is running#
 while continue_playing:
     initialize = initialize_new_game(player1,player2)
     player1 = initialize['player1']
