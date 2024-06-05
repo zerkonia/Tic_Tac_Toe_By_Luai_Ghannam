@@ -210,6 +210,9 @@ def input_decoding(game_placement,sprite):
    j = 0
    while not correct_input:
        player_input =  player_selection()
+#This equation (i = int(0.35 * player_input - 0.339999999999)) is used to convert: 1,2,3----> 0,0,0
+#                                                                                  4,5,6----> 1,1,1
+#                                                                                  7,8,9----> 2,2,2
        i = int(0.35 * player_input - 0.39999999999)
        if player_input in [1,4,7]:
            j = 0
