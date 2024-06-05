@@ -60,7 +60,7 @@ player2 = {'name':'', 'sprite':' ',  'sprite weight':0,'winner': False,'wins':0,
 ''' 
 game_placement = [['1','2','3'],['4','5','6'],['7','8','9']]
 #-----------------------------------------check_for_winner---------------------------------------------------------#
-'''                          check_for_winner is called per player in the main body of the code.
+'''                          is called per player in the main body of the code.
    Input: 
         -a copy of playerX_info.
    Output:
@@ -88,7 +88,7 @@ def check_for_winner(player):
            return True
    return False    
 #--------------------------------------------------reset_scores------------------------------------------------------#
-'''                         reset_scores is called within score_claculator function.
+'''                                 is called within "score_claculator" function.
 
    Input: 
         -a copy of playerX_info, size = the length of one side of tic tac toe game = 3
@@ -126,7 +126,7 @@ def reset_scores(player,size):
    player['diagonal2 score'] = player['diagonal2 score'] * 0
    return player
 #---------------------------------------score_calculator---------------------------------------------------------#
-'''                       score_calculator is called in "end_game".     
+'''                                 is called in "end_game".     
 
   input: 
        -game placement: it is needed to calculate the score in 8 different ways:
@@ -169,7 +169,7 @@ def score_calculator(game_placement, player):
    return player   
 
 #------------------------------------------player_selection------------------------------------------------------#
-'''                             player_selection is called within "input_decoding"
+'''                                is called within "input_decoding"
   input:
        -none
   output: 
@@ -189,7 +189,7 @@ def player_selection():
            number = int(player_input)
    return number
 #-------------------------------------------------input_decoding---------------------------------------------------#
-'''                                              called within "player_turn"
+'''                                       is called within "player_turn"
   input:
        -game_placement: used to check for vacant location on the board.
        -sprite: used to overwite vacant location with player's sprite.
@@ -245,7 +245,7 @@ def game_board(game_placement):
                                                              game_placement[1][0], game_placement[1][1], game_placement[1][2],
                                                              game_placement[2][0], game_placement[2][1], game_placement[2][2]))
 #-----------------------------------------------sprite_weight------------------------------------------------------#
-'''                                         called within "initialize_new_game"
+'''                                is called within "initialize_new_game"
  input:
       - selected sprite of the first palyer
  output:
@@ -259,7 +259,7 @@ def sprite_weight(sprite):
    else:
        return 1
 #--------------------------------------------choose_between_X_and_O------------------------------------------------#
-'''                                         called within "initialize_new_game"
+'''                                  is called within "initialize_new_game"
  input:
       -throw: is a dictionary contains two value of random numbers to simulate a throw of 60-face dice.
       -name1: player number 1 name.
@@ -288,7 +288,7 @@ def choose_between_X_and_O(throw, name1, name2):
            choice[name1] = 'X'
    return choice
 #----------------------------------------------player_naming--------------------------------------------------------#
-'''                                        called within the main body of the code
+'''                             is called within the main body of the code
  input:
       -value: it has 2 values---> A or B to vaguely indicate different players.
       -selection: contains the name of the other player to avoid using the same name for both players.
@@ -314,7 +314,7 @@ def player_naming(value,selection,player_number):
 
 
 #-----------------------------------------------random_dice---------------------------------------------------------#
-'''                                    called within "who_plays_first"
+'''                                    is called within "who_plays_first"
   input: NONE.
   output: 
          -player_throw: random number representing a dice throw
@@ -443,7 +443,7 @@ def player_turn(player,enemy,game_placement,number_of_moves):
    
    return update
 #--------------------------------------------initialize_new_game---------------------------------------------------#
-'''                              called once in every game within main body of the code
+'''                 called once in every game within main body of the code before each new game
   input: player1 and player2 dictionaries.
   
   output: a dictionary containing the following:
