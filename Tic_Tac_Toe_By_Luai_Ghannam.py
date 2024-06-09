@@ -29,7 +29,7 @@ from IPython.display import clear_output # Used to clear the output of each play
 from random import randint               # Used to simulate the roll of a 60-face dice to choose who begins frst
 import time
 #-------------------------------------------------------------------------------------------------------------------#
-''' playerX_info contains the following:
+''' playerX (X= 1 or 2) contains the following:
 -'name': holds player name.
 
 -'sprite': whether X or O.
@@ -62,7 +62,7 @@ game_placement = [['1','2','3'],['4','5','6'],['7','8','9']]
 #-----------------------------------------check_for_winner---------------------------------------------------------#
 '''                          is called per player in the main body of the code.
    Input: 
-        -a copy of playerX_info.
+        -a copy of playerX.
    Output:
          -boolean value to indicate for a winning condition
    notes: 
@@ -91,9 +91,9 @@ def check_for_winner(player):
 '''                                 is called within "score_claculator" function.
 
    Input: 
-        -a copy of playerX_info, size = the length of one side of tic tac toe game = 3
+        -a copy of playerX, size = the length of one side of tic tac toe game = 3
    Output: 
-         -a copy of playerX_info with reseted scores back to zero.
+         -a copy of playerX with reseted scores back to zero.
    notes:
         This is done to prevent miscalculations which will give a false winning condition.
    but what will happen if we didn't use this function:
@@ -265,8 +265,8 @@ def sprite_weight(sprite):
 '''                                  is called within "initialize_new_game"
  input:
       -throw: is a dictionary contains two value of random numbers to simulate a throw of 60-face dice.
-      -name1: player number 1 name.
-      -name2: player number 2 name.
+      -name1: player1 name.
+      -name2: player2 name.
  output:
        -a dictionary contains sprite assaignment.
  note:
